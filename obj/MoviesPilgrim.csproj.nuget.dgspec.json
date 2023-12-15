@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
+    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj": {
+    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "projectUniqueName": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
         "projectName": "MoviesPilgrim",
-        "projectPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "projectPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
         "packagesPath": "C:\\Users\\isabe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\obj\\",
+        "outputPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\isabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,11 +54,23 @@
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [
