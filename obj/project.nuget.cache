@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n8YOT+TBwk591mTNYeuHGNdM0mY2ecGz3AaMlE0OdewEOeQB1F/3bMGHxmTvjcY2VYeH/V7X17GnlYQ+R279ZQ==",
+  "dgSpecHash": "70FdBpaPTBGpgC0CPNtZhrmkpW1Vz3YTncOlagxd7aNRrewtVVu/IIOM/ySKlsj7IFiGp3tSgnhZQm/RhryAsg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
+  "projectFilePath": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\melan\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\melan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
+    "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
   },
   "projects": {
-    "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {
+    "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "projectUniqueName": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
         "projectName": "MoviesPilgrim",
-        "projectPath": "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "projectPath": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
         "packagesPath": "C:\\Users\\melan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\obj\\",
+        "outputPath": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\melan\\AppData\\Roaming\\NuGet\\NuGet.Config"
