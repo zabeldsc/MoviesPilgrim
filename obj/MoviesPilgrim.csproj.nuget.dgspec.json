@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
+    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj": {}
   },
   "projects": {
-    "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj": {
+    "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "projectUniqueName": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj",
         "projectName": "MoviesPilgrim",
-        "projectPath": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\MoviesPilgrim.csproj",
-        "packagesPath": "C:\\Users\\melan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\melan\\Documents\\GitHub\\MoviesPilgrim\\obj\\",
+        "projectPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\MoviesPilgrim.csproj",
+        "packagesPath": "C:\\Users\\isabe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\isabe\\OneDrive\\Documentos\\GitHub\\MoviesPilgrim\\MoviesPilgrim\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\melan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\isabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,18 +59,6 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[7.0.12, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
-              "target": "Package",
-              "version": "[7.0.11, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql.Design": {
-              "target": "Package",
-              "version": "[1.1.2, )"
             }
           },
           "imports": [
