@@ -1,5 +1,6 @@
 bin/
 obj/
+bin\Debug\net7.0
 bin/Debug/net7.0
 *.dll
 *.dll
