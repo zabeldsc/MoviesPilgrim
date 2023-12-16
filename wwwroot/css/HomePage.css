@@ -14,9 +14,68 @@
 .container_left{
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container_right{
     width: 50%;
     height: 100%;
+    background-color: var(--cards);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice_container{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns_choice{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 38px;
+    gap: 24px;
+}
+.btns_choice > *{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    transition: 0.5s ease;
+    font-weight: 500;
+}
+.btns_choice > :first-child{
+    padding: 24px 10px;
+    background-color: var(--primary_color);
+    width: 50%;
+}
+.btns_choice > :last-child{
+    padding: 24px 10px;
+    border: 2px solid white;
+    width: 50%;
+}
+.btns_choice > *:hover{
+    background-color: white;
+    color: black;
 }
