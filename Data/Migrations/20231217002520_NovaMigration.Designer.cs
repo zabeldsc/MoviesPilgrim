@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MoviesPilgrim.Data;
 
@@ -10,9 +11,11 @@ using MoviesPilgrim.Data;
 namespace MoviesPilgrim.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231217002520_NovaMigration")]
+    partial class NovaMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
@@ -227,22 +230,19 @@ namespace MoviesPilgrim.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("quantidade")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("sinopse")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("taxa_dia")
-                        .HasColumnType("TEXT");
+                    b.Property<float>("taxa_dia")
+                        .HasColumnType("REAL");
 
                     b.Property<string>("titulo")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("valor_filme")
-                        .HasColumnType("TEXT");
+                    b.Property<float>("valor_filme")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 

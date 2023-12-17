@@ -1,0 +1,48 @@
+@model Filme
+@{
+    ViewData["Title"] = "Filmes";
+    Layout = "_LayoutAdmin";
+}
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Filme</h1>
+</div>
+
+<form asp-controller="Filme" asp-action="CriarFilme" method="Post">
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" asp-for="titulo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="sinopse">Sinopse</label>
+        <input type="text" asp-for="sinopse" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for="valor_filme">Quantidade</label>
+        <input type="text" asp-for="quantidade" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="valor_filme">Valor</label>
+        <input type="text" asp-for="valor_filme" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="taxa_dia">Taxa Diária</label>
+        <input type="text" asp-for="taxa_dia" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="classificacao">Classificação</label>
+        <input type="text" asp-for="classificacao" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="genero">Gênero</label>
+        <input type="text" asp-for="genero" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a role="submit" class="btn btn-secondary" asp-controller="Filme" asp-action="Index">Voltar</a>
+</form>
