@@ -8,9 +8,14 @@ using Microsoft.Extensions.Logging;
 
 namespace MoviesPilgrim.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     public class DashboardController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
+        
         public IActionResult ViewAll()
         {
             return View();
@@ -20,5 +25,6 @@ namespace MoviesPilgrim.Controllers
         {
             return View("Error!");
         }
+
     }
 }
