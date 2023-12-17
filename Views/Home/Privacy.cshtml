@@ -2630,6 +2630,10 @@ Primary use:	FlixTV Admin Template
             outline: none !important;
         }
 
+        #laembaixo {
+            height: 447px;
+        }
+
         .select2-container--default .select2-selection--single .select2-selection__arrow {
             height: 44px;
             top: 0;
@@ -2969,7 +2973,7 @@ Primary use:	FlixTV Admin Template
                 <section id="conteudo">
                     <!-- dashbox -->
                     <div class="parte">
-                        <div class="dashbox">
+                        <div class="dashbox" id="laembaixo">
                             <div class="dashbox__title">
                                 <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <path
@@ -2984,7 +2988,7 @@ Primary use:	FlixTV Admin Template
                                                 d="M21,11a1,1,0,0,0-1,1,8.05,8.05,0,1,1-2.22-5.5h-2.4a1,1,0,0,0,0,2h4.53a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4.77A10,10,0,1,0,22,12,1,1,0,0,0,21,11Z">
                                             </path>
                                         </svg></a>
-                                    <a class="dashbox__more" href="@Url.Action("ViewAll", "Dashboard")">Ver Mais</a>
+                                    <a class="dashbox__more" asp-controller="Home" asp-action="Mais">Ver Mais</a>
                                 </div>
                             </div>
 
@@ -3014,6 +3018,51 @@ Primary use:	FlixTV Admin Template
                                                 </td>
                                                 <td>
                                                     <div class="main__table-text">30/02</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="main__table-text">321</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text"><a href="#">I Dream in Another
+                                                            Language</a></div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">05/01</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">30/03</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="main__table-text">321</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text"><a href="#">I Dream in Another
+                                                            Language</a></div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">05/01</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">30/03</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="main__table-text">321</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text"><a href="#">I Dream in Another
+                                                            Language</a></div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">05/01</div>
+                                                </td>
+                                                <td>
+                                                    <div class="main__table-text">30/03</div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -3061,7 +3110,7 @@ Primary use:	FlixTV Admin Template
                                                     d="M21,11a1,1,0,0,0-1,1,8.05,8.05,0,1,1-2.22-5.5h-2.4a1,1,0,0,0,0,2h4.53a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4.77A10,10,0,1,0,22,12,1,1,0,0,0,21,11Z">
                                                 </path>
                                             </svg></a>
-                                        <a class="dashbox__more" href="@Url.Action("ViewAll", "Dashboard")">Ver Mais</a>
+                                        <a class="dashbox__more" asp-controller="Home" asp-action="Mais">Ver Mais</a>
                                     </div>
                                 </div>
 
@@ -3138,7 +3187,7 @@ Primary use:	FlixTV Admin Template
                                                     d="M21,11a1,1,0,0,0-1,1,8.05,8.05,0,1,1-2.22-5.5h-2.4a1,1,0,0,0,0,2h4.53a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4.77A10,10,0,1,0,22,12,1,1,0,0,0,21,11Z">
                                                 </path>
                                             </svg></a>
-                                        <a class="dashbox__more" href="@Url.Action("ViewAll", "Dashboard")">Ver Mais</a>
+                                        <a class="dashbox__more" asp-controller="Home" asp-action="Mais">Ver Mais</a>
                                     </div>
                                 </div>
 

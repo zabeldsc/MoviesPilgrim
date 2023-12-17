@@ -8,9 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatabase");
-builder.Services.AddDbContext<ApplicationDbContext>(opt => {
-    opt.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
-});
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection) ));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
