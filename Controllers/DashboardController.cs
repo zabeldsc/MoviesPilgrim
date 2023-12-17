@@ -14,11 +14,6 @@ namespace MoviesPilgrim.Controllers
         {
             return View();
         }
-
-        public IActionResult Locacoes(){
-            
-            return View();
-        }
         
         public IActionResult Error()
         {
