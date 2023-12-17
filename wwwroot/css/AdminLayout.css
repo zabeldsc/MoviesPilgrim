@@ -17,12 +17,17 @@
     font-family: 'Rubik', sans-serif;
 }
 
+body > *{
+    animation: fadein 1s;
+}
+
 main {
     background-color: var(--background);
     width: 100vw;
     height: 100vh;
     margin: 0;
     display: flex;
+    overflow: hidden;
 }
 
 aside {
@@ -33,6 +38,7 @@ aside {
     background-color: var(--background);
     color: white;
     flex-direction: column;
+    transition: 0.1s ease;
 }
 
 header {

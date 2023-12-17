@@ -1,0 +1,45 @@
+body{
+    animation: fadein 1s;
+}
+body > *{
+    animation: fadein 1s;
+}
+
+section{
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.head_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+}
+.head_section > h1{
+    color: white;
+    font-weight: 400;
+}
+
+.add_locacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background-color: var(--primary_color);
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+    border-radius: 12px;
+    font-weight: 500;
+}
+.add_locacao > iconify-icon{
+    font-size: 24px;
+}
+.add_locacao:hover{
+    background-color: white;
+    color: black;
+}
