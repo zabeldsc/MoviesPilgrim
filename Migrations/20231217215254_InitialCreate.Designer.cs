@@ -11,7 +11,7 @@ using MoviesPilgrim.Data;
 namespace MoviesPilgrim.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231217213810_InitialCreate")]
+    [Migration("20231217215254_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

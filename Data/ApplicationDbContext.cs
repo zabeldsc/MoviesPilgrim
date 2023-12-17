@@ -14,7 +14,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Filme> Filmes { get; set; }
     public DbSet<ViewLocacoes> ViewLocacoes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ViewLocacoes>().ToView("ViewLocacoes").HasKey(v => v.IdLocacao);
 
