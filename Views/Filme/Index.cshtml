@@ -1,0 +1,52 @@
+@model List<Filme>
+@{
+    ViewData["Title"] = "Filmes";
+    Layout = "_LayoutAdmin";
+}
+<div class="text-center">
+    <h1 class="display-4">Lista de Filmes</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a asp-action="Criar" asp-controller="Filme" class="btn btn-sucess">Criar Filme</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Titulo</td>
+                    <td>Sinopse</td>
+                    <td>Quantidade</td>
+                    <td>Valor</td>
+                    <td>Taxa Diária</td>
+                    <td>Classificação</td>
+                    <td>Gênero</td>
+                </tr>
+            </thead>
+
+            @if (Model != null && Model.Any())
+            {
+                foreach (Filme filme in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td scope="row">@filme.titulo</td>
+                            <td scope="row">@filme.sinopse</td>
+                            <td scope="row">@filme.quantidade</td>
+                            <td scope="row">@filme.valor_filme</td>
+                            <td scope="row">@filme.taxa_dia</td>
+                            <td scope="row">@filme.classificacao</td>
+                            <td scope="row">@filme.genero</td>
+                            <td>
+                                <a asp-action="Editar" asp-route-id="@filme.Id">Editar</a> |
+                                <a asp-action="VerificarDeletar" asp-route-id="@filme.Id">Remover</a>
+                            </td>   
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+</div>
