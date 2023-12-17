@@ -6,12 +6,14 @@ using MoviesPilgrim.Models;
 
 namespace MoviesPilgrim.Repository
 {
-    public interface IFilmeRepository
+    public interface ILocadoraRepository
     {
         Filme adicionar(Filme filme);
         Filme buscarId(int id);
         Filme atualizar(Filme filme);
         List<Filme> listarFilmes();
         bool deletar(int id);
+
+        List<ViewLocacoes> ListarLocacoes();
     }
 }
