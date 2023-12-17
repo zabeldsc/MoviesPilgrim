@@ -11,7 +11,7 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<Filme> Filmes { get; set; }
+    public DbSet<FilmeModel> Filmes { get; set; }
     public DbSet<ViewLocacoes> ViewLocacoes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

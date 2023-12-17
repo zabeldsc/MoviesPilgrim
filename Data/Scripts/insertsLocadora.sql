@@ -1,3 +1,4 @@
+-- Active: 1700955922591@@127.0.0.1@3306@locadora
 USE LOCADORA;
 
 /* INSERTS */
@@ -147,7 +148,6 @@ VALUES (
 INSERT INTO
     tbfilme (
         titulo,
-        fk_id_fornecedor,
         sinopse,
         quantidade,
         valor_filme,
@@ -158,7 +158,6 @@ INSERT INTO
 VALUES
 (
         'Carros 2',
-        1,
         'Um carro de corrida muito louco',
         '10',
         '15.00',
@@ -167,7 +166,6 @@ VALUES
         'Infantil'
     ), (
         'Panico 5',
-        2,
         'homem que mata muita gente por puro prazer ',
         '20',
         '15.50',
@@ -176,7 +174,6 @@ VALUES
         'Terror'
     ), (
         'Indiana Jones 2',
-        3,
         'Um aventureiro curioso leva seus amigos para uma nova descoberta',
         '25',
         '25.50',
@@ -185,28 +182,28 @@ VALUES
         'Aventura'
     ),
 (
-'Harry Potter e A Pedra Filosofal', 3,
+'Harry Potter e A Pedra Filosofal',
 'Harry Potter descobre que é um bruxo e ingressa na Escola de Magia e Bruxaria de Hogwarts.',
  30, 
  24.90, 
  2.80, 
  'Livre', 
  'Fantasia'),
-('Harry Potter and the Goblet of Fire', '3',
+('Harry Potter and the Goblet of Fire',
  'Harry é selecionado inesperadamente para competir no Torneio Tribruxo',
  20,
  24.90,
  2.80,
  12, 
  'Fantasia'),
-( 'Harry Potter and the Order of the Phoenix', '3',
+( 'Harry Potter and the Order of the Phoenix',
  'Harry enfrenta a indiferença do Ministério da Magia e forma a Ordem da Fênix para enfrentar o retorno de Lord Voldemort.', 
  '20',
  '24.90',
  '2.80',
  '12',
  'Fantasia'),
-( 'Harry Potter and the Half-Blood Prince','2',
+( 'Harry Potter and the Half-Blood Prince',
  'Harry descobre segredos sobre o passado de Voldemort enquanto Hogwarts se prepara para a batalha iminente entre as forças do bem e do mal.',
  '20',
  '24.90',
@@ -221,20 +218,17 @@ INSERT INTO
         fk_id_filme
     )
 VALUES 
-	(current_timestamp(),2, 8), 
-	(current_timestamp(),1, 9), 
-	(current_timestamp(),2, 8),
-	(current_timestamp(),3, 10),
-	('2023-12-01 17:20:02', 3,12),
-	('2023-12-01 14:12:05',1, 13),
-    ('2023-12-01 15:24:06',1, 9);
+	(current_timestamp(),2, 1), 
+	(current_timestamp(),1, 2), 
+	(current_timestamp(),2, 3),
+	(current_timestamp(),3, 4);
 
 INSERT INTO
 	tbitenslocacao(fk_id_locacao,quantidade_filme)
     VALUES
-    (43,1),
-    (44,2),
-    (45,2),
-    (46,1),
-    (45,2),
-    (45,1);
+    (37,1),
+    (38,2),
+    (39,2),
+    (39,1),
+    (40,2),
+    (40,1);

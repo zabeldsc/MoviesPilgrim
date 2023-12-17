@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MoviesPilgrim.Migrations
 {
     /// <inheritdoc />
-    public partial class NewMigration : Migration
+    public partial class FixTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -70,18 +70,18 @@ namespace MoviesPilgrim.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Filmes",
+                name: "tbfilme",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    id_filme = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     titulo = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     sinopse = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     quantidade = table.Column<int>(type: "int", nullable: false),
-                    valor_filme = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    taxa_dia = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    valor_filme = table.Column<decimal>(type: "DECIMAL(10,2)", nullable: false),
+                    taxa_dia = table.Column<decimal>(type: "DECIMAL(10,2)", nullable: false),
                     classificacao = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     genero = table.Column<string>(type: "longtext", nullable: false)
@@ -89,7 +89,7 @@ namespace MoviesPilgrim.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Filmes", x => x.Id);
+                    table.PrimaryKey("PK_tbfilme", x => x.id_filme);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -277,7 +277,7 @@ namespace MoviesPilgrim.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Filmes");
+                name: "tbfilme");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

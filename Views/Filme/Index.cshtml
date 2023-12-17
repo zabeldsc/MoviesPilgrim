@@ -1,4 +1,4 @@
-@model List<Filme>
+@model List<FilmeModel>
 @{
     ViewData["Title"] = "Filmes";
     Layout = "_LayoutAdmin";
@@ -28,7 +28,7 @@
 
             @if (Model != null && Model.Any())
             {
-                foreach (Filme filme in Model)
+                foreach (FilmeModel filme in Model)
                 {
                     <tbody>
                         <tr>

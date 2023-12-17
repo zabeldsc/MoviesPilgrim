@@ -215,11 +215,12 @@ namespace MoviesPilgrim.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("MoviesPilgrim.Models.Filme", b =>
+            modelBuilder.Entity("MoviesPilgrim.Models.FilmeModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("id_filme");
 
                     b.Property<string>("classificacao")
                         .IsRequired()
@@ -237,18 +238,18 @@ namespace MoviesPilgrim.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<decimal>("taxa_dia")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("DECIMAL(10,2)");
 
                     b.Property<string>("titulo")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<decimal>("valor_filme")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("DECIMAL(10,2)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Filmes");
+                    b.ToTable("tbfilme");
                 });
 
             modelBuilder.Entity("MoviesPilgrim.Models.ViewLocacoes", b =>

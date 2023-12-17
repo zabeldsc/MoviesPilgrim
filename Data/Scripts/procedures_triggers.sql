@@ -112,14 +112,16 @@ CREATE TRIGGER CalcSubtotal
 BEFORE INSERT ON tbitenslocacao
 FOR EACH ROW
 BEGIN
-	DECLARE valorFilme DECIMAL(10,2);
-    
+    DECLARE valorFilme DECIMAL(10,2);
+    DECLARE qtdFilmes DECIMAL(10,2);
+
     SELECT valor_filme INTO valorFilme
     FROM tbfilme
     WHERE id_filme = NEW.fk_id_filme;
-
-    SET NEW.subtotal = NEW.quantidade_filme * valorFilme;
     
+    SET NEW.subtotal = NEW.quantidade_filme * valorFilme;
+    -- WHERE fk_id_locacao = NEW.id_locacao;
+
 END $$
 
 DELIMITER ;
