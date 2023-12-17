@@ -11,8 +11,13 @@ using MoviesPilgrim.Data;
 namespace MoviesPilgrim.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
+<<<<<<<< HEAD:Migrations/20231217202839_NewMigration.Designer.cs
+    [Migration("20231217202839_NewMigration")]
+    partial class NewMigration
+========
     [Migration("20231217203520_InitialCreate")]
     partial class InitialCreate
+>>>>>>>> 43eb8f60876a0604b9264ae611a597668a147857:Migrations/20231217203520_InitialCreate.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -252,6 +257,39 @@ namespace MoviesPilgrim.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Filmes");
+                });
+
+            modelBuilder.Entity("MoviesPilgrim.Models.ViewLocacoes", b =>
+                {
+                    b.Property<int>("IdLocacao")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DataLimite")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("DataLocacao")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("EnumStatus")
+                        .IsRequired()
+                        .HasColumnType("ENUM");
+
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NomeFilme")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("DECIMAL(10,2)");
+
+                    b.HasKey("IdLocacao");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("ViewLocacoes", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

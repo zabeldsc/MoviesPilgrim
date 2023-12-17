@@ -8,12 +8,15 @@ namespace MoviesPilgrim.Controllers;
 
 public class FilmeController : Controller
 {
-    private readonly IFilmeRepository filme_Repository;
-    public FilmeController(IFilmeRepository filmeRepository){
-        filme_Repository = filmeRepository;
+    
+    private readonly ILocadoraRepository _locadoraRepository;
+    public FilmeController(ILocadoraRepository locadoraRepository){
+            _locadoraRepository = locadoraRepository;
     }
+
+
     public IActionResult Index(){
-        List<Filme> filme = filme_Repository.listarFilmes();
+        List<Filme> filme = _locadoraRepository.listarFilmes();
         return View(filme);
     }
     public IActionResult Criar(){
@@ -22,27 +25,27 @@ public class FilmeController : Controller
 
     [HttpPost]
     public IActionResult CriarFilme(Filme filme){
-        filme_Repository.adicionar(filme);
+        _locadoraRepository.adicionar(filme);
         return RedirectToAction("Index");
     }
     
     public IActionResult Editar(int id){
-        var filme = filme_Repository.buscarId(id);
+        var filme = _locadoraRepository.buscarId(id);
         return View(filme);
     }
 
     [HttpPost]
     public IActionResult Atualizar(Filme filme){
-        filme_Repository.atualizar(filme);
+        _locadoraRepository.atualizar(filme);
         return RedirectToAction("Index");
     }
 
     public IActionResult VerificarDeletar(int id){
-        var filme = filme_Repository.buscarId(id);
+        var filme = _locadoraRepository.buscarId(id);
         return View(filme);
     }
     public IActionResult Deletar(int id){
-        filme_Repository.deletar(id);
+        _locadoraRepository.deletar(id);
         return RedirectToAction("Index");
     }
 }

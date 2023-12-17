@@ -7,10 +7,10 @@ using MoviesPilgrim.Models;
 
 namespace MoviesPilgrim.Repository
 {
-    public class FilmeRepository : IFilmeRepository
+    public class LocadoraRepository : ILocadoraRepository
     {
         private readonly ApplicationDbContext application_DbContext;
-        public FilmeRepository(ApplicationDbContext applicationDbContext){
+        public LocadoraRepository(ApplicationDbContext applicationDbContext){
             application_DbContext = applicationDbContext;
         }
         public Filme adicionar(Filme filme)
@@ -53,5 +53,10 @@ namespace MoviesPilgrim.Repository
             application_DbContext.SaveChanges();
             return true;
         }
+    
+    public List<ViewLocacoes> ListarLocacoes(){
+            return application_DbContext.ViewLocacoes.ToList();
+    }
+    
     }
 }

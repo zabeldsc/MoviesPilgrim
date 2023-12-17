@@ -6,15 +6,17 @@ using MoviesPilgrim.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatabase");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection) ));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
+
+builder.Services.AddScoped<ILocadoraRepository, LocadoraRepository>();
 
 builder.Services.AddControllersWithViews();
 

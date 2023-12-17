@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 
 namespace MoviesPilgrim.Controllers
 {
-    [Route("api/[controller]/[action]")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

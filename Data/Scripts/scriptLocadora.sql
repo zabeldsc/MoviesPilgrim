@@ -1,4 +1,4 @@
--- Active: 1697565397734@@127.0.0.1@3306@locadora
+-- Active: 1700955922591@@127.0.0.1@3306@locadora
 CREATE DATABASE locadora;
 USE locadora;
 
@@ -48,6 +48,24 @@ FROM tblocacoes
 WHERE data_limite >= now();
 
 SELECT * FROM FilmesAtrasados;
+
+
+CREATE VIEW ViewLocacoes AS
+SELECT
+    tblocacoes.id_locacao AS IdLocacao,
+    tbclientes.nome AS NomeCliente,
+    tbfilme.titulo AS NomeFilme,
+    tblocacoes.data_locacao AS DataLocacao,
+    tblocacoes.data_limite AS DataLimite,
+    tblocacoes.status_locacao AS EnumStatus,
+    tblocacoes.total_locacao AS Total
+FROM
+    tblocacoes
+    INNER JOIN tbclientes ON tblocacoes.fk_id_cliente = tbclientes.id_cliente
+    INNER JOIN tbfilme ON tblocacoes.fk_id_filme = tbfilme.id_filme;
+
+SELECT * FROM viewlocacoes;
+
 
 /* ENDEREÇOS DOS CLIENTES */
 CREATE VIEW ViewEnderecosClientes AS

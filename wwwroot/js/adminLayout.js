@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         items[1].classList.add("select-item");
         items[0].classList.remove("select-item");
         items[2].classList.remove("select-item");
-    } else if (window.location.href.includes("Locacoes")) {
+    } else if (window.location.href.includes("Locacoes/Index")) {
         items[2].classList.add("select-item");
         items[0].classList.remove("select-item");
         items[1].classList.remove("select-item");
@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function navigate(el) {
     switch (el) {
         case 1:
-            window.location.href = "/api/Dashboard/Index";
+            window.location.href = "/Dashboard/Index";
             break;
         case 2:
             window.location.href = "/Filme/Index";
             break;
         case 3:
-            window.location.href = "/api/Dashboard/Locacoes";
+            window.location.href = "/Locacoes/Index";
             break;
         default:
             break;

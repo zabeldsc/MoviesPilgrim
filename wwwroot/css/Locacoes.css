@@ -86,8 +86,8 @@ section{
 .cell_table{
     background-color: var(--cards);
     padding: 16px 8px;
+    font-weight: 200;
 }
-
 
 .actions_cell{
     display: flex;

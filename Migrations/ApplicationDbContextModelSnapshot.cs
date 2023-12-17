@@ -251,6 +251,39 @@ namespace MoviesPilgrim.Migrations
                     b.ToTable("Filmes");
                 });
 
+            modelBuilder.Entity("MoviesPilgrim.Models.ViewLocacoes", b =>
+                {
+                    b.Property<int>("IdLocacao")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DataLimite")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("DataLocacao")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("EnumStatus")
+                        .IsRequired()
+                        .HasColumnType("ENUM");
+
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NomeFilme")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("DECIMAL(10,2)");
+
+                    b.HasKey("IdLocacao");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("ViewLocacoes", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
