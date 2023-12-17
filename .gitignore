@@ -1,0 +1,12 @@
+bin/
+obj/
+Debug/
+net7.0/
+*.dll
+*.dll
+*.exe
+*.pdb
+.sln
+MoviesPilgrim.sln
+Migrations/
+appsettings.json

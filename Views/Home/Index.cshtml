@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<link rel="stylesheet" href="../../css/HomePage.css">
+
+<div class="background_img">
+
+    <div class="container_main">
+        <div class="container_left">
+            <div class="logo_text">
+                <img src="img/logo_text_white.png"  width="320px" height="123px">
+                <p>SISTEMA DE CONTROLE DE LOCAÇÕES</p>
+            </div>
+        </div>
+        <div class="container_right">
+            <div class="choice_container">
+                <p>ESCOLHA UMA OPÇÃO</p>
+                <div class="btns_choice">
+                    <a asp-area="Identity" asp-page="/Account/Login">Fazer Login</a>
+                    <a asp-area="Identity" asp-page="/Account/Register">Criar Conta</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
