@@ -1,52 +1,89 @@
-@model List<Filme>
 @{
-    ViewData["Title"] = "Filmes";
+    ViewData["Title"] = "Locacoes";
     Layout = "_LayoutAdmin";
 }
-<div class="text-center">
-    <h1 class="display-4">Lista de Filmes</h1>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <a asp-action="Criar" asp-controller="Filme" class="btn btn-sucess">Criar Filme</a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Titulo</td>
-                    <td>Sinopse</td>
-                    <td>Quantidade</td>
-                    <td>Valor</td>
-                    <td>Taxa Diária</td>
-                    <td>Classificação</td>
-                    <td>Gênero</td>
-                </tr>
-            </thead>
 
-            @if (Model != null && Model.Any())
-            {
-                foreach (Filme filme in Model)
-                {
-                    <tbody>
-                        <tr>
-                            <td scope="row">@filme.titulo</td>
-                            <td scope="row">@filme.sinopse</td>
-                            <td scope="row">@filme.quantidade</td>
-                            <td scope="row">@filme.valor_filme</td>
-                            <td scope="row">@filme.taxa_dia</td>
-                            <td scope="row">@filme.classificacao</td>
-                            <td scope="row">@filme.genero</td>
-                            <td>
-                                <a asp-action="Editar" asp-route-id="@filme.Id">Editar</a> |
-                                <a asp-action="VerificarDeletar" asp-route-id="@filme.Id">Remover</a>
-                            </td>   
-                        </tr>
-                    </tbody>
-                }
-            }
+<link rel="stylesheet" href="../../css/Locacoes.css">
+
+
+<section>
+    <div class="head_section">
+        <h1>Filmes</h1>
+        <a asp-controller="Filme" asp-action="Criar" class="add_locacao">
+            Novo Filme
+            <iconify-icon icon="fluent:add-16-regular"></iconify-icon>
+        </a>
+    </div>
+    <div class="table_area">
+        <table class="table_locacoes">
+            <thead class="head_table">
+                <th class="cell_head">
+                    ID
+                </th>
+                <th class="cell_head">
+                    TÍTULO
+                </th>
+                <th class="cell_head">
+                    SINOPSE
+                </th>
+                <th class="cell_head">
+                    QUANTIDADE
+                </th>
+                <th class="cell_head">
+                    VALOR DO FILME
+                </th>
+                <th class="cell_head">
+                    TAXA POR DIA
+                </th>
+                <th class="cell_head">
+                    CLASSIFICAÇÃO
+                </th>
+                <th class="cell_head">
+                    GÊNERO
+                </th>
+                <th class="cell_head">
+                    AÇÕES
+                </th>
+            </thead>
+            <tbody class="body_table">
+                <tr class="row_table">
+                    <td class="cell_table">
+                        1
+                    </td>
+                    <td class="cell_table">
+                        2
+                    </td>
+                    <td class="cell_table">
+                        3
+                    </td>
+                    <td class="cell_table">
+                        4
+                    </td>
+                    <td class="cell_table">
+                        5
+                    </td>
+                    <td class="cell_table">
+                        6
+                    </td>
+                    <td class="cell_table">
+                        7
+                    </td>
+                    <td class="cell_table">
+                        7
+                    </td>
+                    <td class="cell_table actions_cell">
+                        <a class="view_action">
+                            <iconify-icon icon="mdi:eye-outline"></iconify-icon>
+                        </a>
+                        <a class="edit_action">
+                            <iconify-icon icon="mi:edit"></iconify-icon>
+                        </a>
+                        <a class="delete_action">
+                            <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
-</div>
+</section>
