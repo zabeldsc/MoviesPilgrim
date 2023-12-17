@@ -6,8 +6,12 @@
     --primary_color: #2F80ED;
     --success: #29B474;
     --error: #EB5757;
+    --alert: #ffc312;
     --border: rgba(47, 128, 237, 0.1);
     --subtitle: #e0e0e0;
+    --back_edit: rgba(47,128,237,0.1);
+    --back_delete: rgba(235,87,87,0.1);
+    --back_view: rgba(255,195,18,0.1);
 }
 
 
