@@ -33,6 +33,7 @@ namespace MoviesPilgrim.Repository
 
             filmeDB.titulo = filme.titulo;
             filmeDB.sinopse = filme.sinopse;
+            filmeDB.quantidade = filme.quantidade;
             filmeDB.valor_filme = filme.valor_filme;
             filmeDB.taxa_dia = filme.taxa_dia;
             filmeDB.classificacao = filme.classificacao;
