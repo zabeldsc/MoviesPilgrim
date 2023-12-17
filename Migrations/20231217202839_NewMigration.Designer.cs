@@ -11,8 +11,13 @@ using MoviesPilgrim.Data;
 namespace MoviesPilgrim.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
+<<<<<<<< HEAD:Migrations/20231217202839_NewMigration.Designer.cs
     [Migration("20231217202839_NewMigration")]
     partial class NewMigration
+========
+    [Migration("20231217203520_InitialCreate")]
+    partial class InitialCreate
+>>>>>>>> 43eb8f60876a0604b9264ae611a597668a147857:Migrations/20231217203520_InitialCreate.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
