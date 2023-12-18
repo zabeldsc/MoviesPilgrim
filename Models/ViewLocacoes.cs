@@ -15,19 +15,14 @@ namespace MoviesPilgrim.Models
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataLocacao { get; set; }
+        
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataLimite { get; set; }
+        
         [Column(TypeName = "ENUM")]
-        [EnumDataType(typeof(EnumStatus))]
-        public EnumStatus EnumStatus { get; set; }
-        [Column(TypeName = "DECIMAL(10,2)")]
-        public float Total { get; set; }
+        [EnumDataType(typeof(Statuslocacao))]
+        public Statuslocacao Statuslocacao { get; set; }
 
     }
-}
-
-public enum EnumStatus
-{
-    Atrasado,
-    Devolvido,
-    Locando
 }

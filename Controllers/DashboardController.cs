@@ -9,15 +9,29 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using MoviesPilgrim.Repository;
+using MoviesPilgrim.Models;
 
 namespace MoviesPilgrim.Controllers
 {
     [Authorize]
     public class DashboardController : Controller
     {
+        private readonly ILocadoraRepository _locadoraRepository;
+        public DashboardController(ILocadoraRepository locadoraRepository){
+                _locadoraRepository = locadoraRepository;
+        }
+
+
         public IActionResult Index()
         {
-            return View();
+            var viewModel = new LocacoesViewModel
+        {
+            LocacoesAtuais = _locadoraRepository.GetLocacoesAtuais(),
+            LocacoesAtrasadas = _locadoraRepository.GetLocacoesAtrasadas(),
+            LocacoesDevolvidas = _locadoraRepository.GetLocacoesDevolvidas()
+        };
+            return View(viewModel);
         }
         
         public IActionResult Error()

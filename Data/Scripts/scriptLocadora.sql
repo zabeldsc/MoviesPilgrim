@@ -1,4 +1,5 @@
 -- Active: 1700955922591@@127.0.0.1@3306@locadora
+
 CREATE DATABASE locadora;
 USE locadora;
 
@@ -57,8 +58,7 @@ SELECT
     tbfilme.titulo AS NomeFilme,
     tblocacoes.data_locacao AS DataLocacao,
     tblocacoes.data_limite AS DataLimite,
-    tblocacoes.status_locacao AS EnumStatus,
-    tblocacoes.total_locacao AS Total
+    tblocacoes.status_locacao AS StatusLocacao
 FROM
     tblocacoes
     INNER JOIN tbclientes ON tblocacoes.fk_id_cliente = tbclientes.id_cliente
@@ -164,21 +164,19 @@ SELECT @data_locacao, @data_limite, @status_locacao, @id_cliente, @id_filme, @to
 /* DANGER ZONE */
 
 /* DROPS */
--- DROP DATABASE locadora;
+DROP DATABASE locadora;
 -- DROP TABLE tbendereco;
--- DROP TABLE tbfuncionarios;
--- DROP TABLE tbdependentes;
 -- DROP TABLE tbclientes;
 -- DROP TABLE tbfilme;
--- DROP TABLE tblocacoes;
--- DROP TABLE tbfornecedor;
--- DROP TABLE tbitenslocacao;
+DROP TABLE tblocacoes;
+DROP TABLE tbitenslocacao;
+-- DROP TABLE tbmulta;
 
 /* DELETE */
 -- DELETE FROM tbendereco;
--- DELETE FROM tbfuncionarios;
 -- DELETE FROM tbclientes;
 -- DELETE FROM tbfilme;
--- DELETE FROM tblocacoes;
--- DELETE FROM tbitenslocacao;
+DELETE FROM tblocacoes;
+DELETE FROM tbitenslocacao;
+-- DELETE FROM tbmulta;
 

@@ -1,17 +1,13 @@
+@model MoviesPilgrim.Models.LocacoesViewModel
 @{
     ViewData["Title"] = "Dashboard";
     Layout = "_LayoutAdmin";
 }
 
-<html lang="pt-br">
+<link rel="stylesheet" href="../../css/Dashboard.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../css/Dashboard.css">
-</head>
 
-<body>
+
     @* <main class="main"> *@
         <div class="container-fluid section">
             <div class="row">
@@ -84,35 +80,38 @@
                                             <tr>
                                                 <th>ID</th>
                                                 <th>NOME CLIENTE</th>
-                                                <th>AQUISIÇÃO</th>
                                                 <th>LIMITE</th>
+                                                <th>NOME FILME</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            
+                                        
+    @foreach (var locacao in Model.LocacoesAtuais){
+        <tr>
                                                 <td>
                                                     <div class="main__table-text">
-                                                        -
+                                                        <p>@locacao.IdLocacao</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="main__table-text">
-                                                        <a href="#">
-                                                            -
-                                                        </a>
+                                                        <p>@locacao.NomeCliente</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="main__table-text">
-                                                        00/00
+                                                        <p>@locacao.DataLimite</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="main__table-text">
-                                                        00/00
+                                                       <p>@locacao.NomeFilme</p>
                                                     </div>
                                                 </td>
                                             </tr>
+    }
+                    
                                         </tbody>
                                     </table>
                                 </div>
@@ -145,27 +144,36 @@
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>NOME CLIENTE</th>
-                                                    <th>DIAS ATRASADOS</th>
-                                                    <th>MULTA</th>
+                                                    <th>LIMITE</th>
+                                                    <th>NOME FILME</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                  @foreach (var locacao in Model.LocacoesAtrasadas){
                                                 <tr>
                                                     <td>
-                                                        <div class="main__table-text">26</div>
+                                                        <div class="main__table-text">
+                                                            <p>@locacao.IdLocacao</p>
+                                                        </div>
                                                     </td>
                                                     <td>
-                                                        <div class="main__table-text"><a href="#">I Dream in Another
-                                                                Language</a></div>
+                                                        <div class="main__table-text">
+                                                            <p>@locacao.NomeCliente</p>
+                                                        </div>
                                                     </td>
                                                     <td>
-                                                        <div class="main__table-text">29</div>
+                                                        <div class="main__table-text">
+                                                            <p>@locacao.DataLimite</p>
+                                                        </div>
                                                     </td>
                                                     <td>
-                                                        <div class="main__table-text">R$ 4,00
+                                                        <div class="main__table-text">
+                                                            <p>@locacao.NomeFilme</p>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                }
+                                                
                                                 
                                             </tbody>
                                         </table>
@@ -200,35 +208,36 @@
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>NOME CLIENTE</th>
-                                                    <th>DATA DE DEVOLUÇÃO</th>
-                                                    <th>VALOR</th>
+                                                    <th>LIMITE</th>
+                                                    <th>NOME FILME</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="main__table-text">
-                                                            -
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="main__table-text">
-                                                            -
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="main__table-text">
-                                                            -
+                                                 @foreach (var locacao in Model.LocacoesDevolvidas){
+                                                    <tr>
+                                                        <td>
+                                                            <div class="main__table-text">
+                                                                <p>@locacao.IdLocacao</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="main__table-text">
+                                                                <p>@locacao.NomeCliente</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="main__table-text">
+                                                                <p>@locacao.DataLimite</p>
 
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="main__table-text">
-                                                            R$ -
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="main__table-text">
+                                                                <p>@locacao.NomeFilme</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                }
                                             </tbody>
                                         </table>
                                     </div>
@@ -250,6 +259,3 @@
         </div>
     @* </main> *@
 
-</body>
-
-</html>
