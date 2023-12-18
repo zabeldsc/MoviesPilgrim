@@ -29,7 +29,10 @@ namespace MoviesPilgrim.Controllers
         {
             LocacoesAtuais = _locadoraRepository.GetLocacoesAtuais(),
             LocacoesAtrasadas = _locadoraRepository.GetLocacoesAtrasadas(),
-            LocacoesDevolvidas = _locadoraRepository.GetLocacoesDevolvidas()
+            LocacoesDevolvidas = _locadoraRepository.GetLocacoesDevolvidas(),
+            TotalFilmesCadastrados = _locadoraRepository.CalcTotalFilmes(),
+            TotalClientesLocacao = _locadoraRepository.TotalClientesLocacao(),
+            TotalLocacoes = _locadoraRepository.TotalLocacoes()
         };
             return View(viewModel);
         }

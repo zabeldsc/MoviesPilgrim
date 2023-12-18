@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MoviesPilgrim.Models;
 using MoviesPilgrim.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MoviesPilgrim.Controllers
 {
-    
+    [Authorize]
     public class LocacoesController : Controller
     {
         private readonly ILocadoraRepository _locadoraRepository;

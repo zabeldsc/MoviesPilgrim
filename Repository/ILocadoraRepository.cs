@@ -27,5 +27,9 @@ namespace MoviesPilgrim.Repository
         List<ViewLocacoes> GetLocacoesAtuais();
         List<ViewLocacoes> GetLocacoesAtrasadas();
         List<ViewLocacoes> GetLocacoesDevolvidas();
+
+        int CalcTotalFilmes();
+        int TotalClientesLocacao();
+        int TotalLocacoes();
     }
 }

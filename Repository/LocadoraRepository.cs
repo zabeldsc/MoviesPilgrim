@@ -123,6 +123,21 @@ namespace MoviesPilgrim.Repository
                 .ToList();
         }
 
+    public int CalcTotalFilmes(){
+
+        return application_DbContext.Filmes.Count();
+    }
+
+    public int TotalClientesLocacao()
+    {
+        return application_DbContext.ViewLocacoes.Select(l => l.NomeCliente).Distinct().Count();
+    }
+
+    public int TotalLocacoes()
+    {
+        return application_DbContext.ViewLocacoes.Count();
+    }
+
 
     
 
