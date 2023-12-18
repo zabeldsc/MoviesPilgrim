@@ -1,4 +1,4 @@
-@model FilmeModel
+@model Filme
 @{
     ViewData["Title"] = "Filmes";
     Layout = "_LayoutAdmin";
@@ -7,87 +7,54 @@
 <link rel="stylesheet" href="../../css/Editar.css">
 
 <html>
-<div class="container-fluid">
-    <div class="row">
-        <!-- main title -->
-        <div class="col-12">
-            <div class="main__title">
-                <h2>Editar Filme</h2>
-            </div>
-        </div>
-        <!-- end main title -->
-
-        <!-- form -->
-        <div class="col-12">
-            <form asp-controller="Filme" asp-action="Atualizar" method="Post">
-                <div class="row">
-
-                    <div class="col-12 col-md-7 form__content">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="titulo" class="form__input" placeholder="Título">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <textarea id="sinopse" asp-for="sinopse" name="sinopse" class="form__textarea"
-                                        placeholder="Sinopse"></textarea>
-                                </div>
-                            </div>
-
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="quantidade" class="form__input"
-                                        placeholder="Quantidade">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" class="form__input" asp-for="valor_filme" placeholder="Valor">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="taxa_dia" class="form__input" placeholder="Taxa Diária">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="classificacao" class="form__input"
-                                        placeholder="Classificação">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="genero" class="form__input" placeholder="Gênero">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12" id="botoes">
-                                <button role="submit" class="form__bt" asp-controller="Filme"
-                                    asp-action="Index">voltar</button>
-                                <button type="submit" class="form__btn">editar</button>
-                                <input type="hidden" asp-for="Id">
-                            </div>
-                        </div>
-                    </div>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- main title -->
+            <div class="col-12">
+                <div class="main__title">
+                    <h2>Editar Filme</h2>
                 </div>
-            </form>
+            </div>
+            <!-- end main title -->
+
+            <!-- form -->
+            <div class="col-12">
+                <form asp-controller="Filme" asp-action="Atualizar" method="Post">
+                    <div class="row">
+
+                        <div class="col-12 col-md-7 form__content">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form__group">
+                                        <input type="text" asp-for="titulo" class="form__input" placeholder="Título">
+                                    </div>
+                                </div>
+
+                                <!-- Outros campos do formulário aqui -->
+
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12" id="botoes">
+                                    <button role="submit" class="form__bt" asp-controller="Filme" asp-action="Index">voltar</button>
+                                    <button type="submit" class="form__btn">editar</button>
+                                    <input type="hidden" asp-for="Id">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- end form -->
         </div>
-        <!-- end form -->
+
+        <!-- Botões aqui devem estar dentro do bloco <form> -->
+        <button type="submit" class="btn btn-primary">Alterar</button>
+        <a role="submit" class="btn btn-secondary" asp-controller="Filme" asp-action="Index">Voltar</a>
+        <input type="hidden" asp-for="Id">
     </div>
-</div>
-
+</body>
 </html>
-

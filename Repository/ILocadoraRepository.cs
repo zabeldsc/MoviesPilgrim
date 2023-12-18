@@ -8,10 +8,10 @@ namespace MoviesPilgrim.Repository
 {
     public interface ILocadoraRepository
     {
-        FilmeModel adicionar(FilmeModel filme);
-        FilmeModel buscarId(int id);
-        FilmeModel atualizar(FilmeModel filme);
-        List<FilmeModel> listarFilmes();
+        Filme adicionar(Filme filme);
+        Filme buscarId(int id);
+        Filme atualizar(Filme filme);
+        List<Filme> listarFilmes();
         bool deletar(int id);
 
         List<ViewLocacoes> ListarLocacoes();

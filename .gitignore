@@ -8,5 +8,4 @@ net7.0/
 *.pdb
 .sln
 MoviesPilgrim.sln
-Migrations/
 appsettings.json

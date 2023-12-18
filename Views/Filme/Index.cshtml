@@ -1,5 +1,3 @@
-@model List<FilmeModel>
-
 @{
     ViewData["Title"] = "Locacoes";
     Layout = "_LayoutAdmin";
@@ -10,7 +8,7 @@
 
 <section>
     <div class="head_section">
-        <h2>Filmes</h2>
+        <h1>Filmes</h1>
         <a asp-controller="Filme" asp-action="Criar" class="add_locacao">
             Novo Filme
             <iconify-icon icon="fluent:add-16-regular"></iconify-icon>
@@ -48,6 +46,45 @@
                 </th>
             </thead>
             <tbody class="body_table">
+<<<<<<< HEAD
+                <tr class="row_table">
+                    <td class="cell_table">
+                        1
+                    </td>
+                    <td class="cell_table">
+                        2
+                    </td>
+                    <td class="cell_table">
+                        3
+                    </td>
+                    <td class="cell_table">
+                        4
+                    </td>
+                    <td class="cell_table">
+                        5
+                    </td>
+                    <td class="cell_table">
+                        6
+                    </td>
+                    <td class="cell_table">
+                        7
+                    </td>
+                    <td class="cell_table">
+                        7
+                    </td>
+                    <td class="cell_table actions_cell">
+                        <a class="view_action">
+                            <iconify-icon icon="mdi:eye-outline"></iconify-icon>
+                        </a>
+                        <a class="edit_action">
+                            <iconify-icon icon="mi:edit"></iconify-icon>
+                        </a>
+                        <a class="delete_action">
+                            <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
+                        </a>
+                    </td>
+                </tr>
+=======
                 @foreach (var filme in Model)
                 {
                         <tr class="row_table">
@@ -87,6 +124,7 @@
                             </td>
                         </tr>
                 }
+>>>>>>> 76ed63685c8f9ee6910ef48f3fa7e28575ed963e
             </tbody>
         </table>
     </div>
