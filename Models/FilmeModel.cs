@@ -14,6 +14,7 @@ namespace MoviesPilgrim.Models
         [Column("id_filme")]
         public int Id { get; set; }
         public string titulo { get; set; }
+        [MaxLength(250, ErrorMessage="A sinopse deve ter 250 caracteres ou menos")]
         public string sinopse { get; set; }
         public int quantidade { get; set; }
         [Column(TypeName = "DECIMAL(10,2)")]
