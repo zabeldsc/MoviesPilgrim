@@ -82,7 +82,7 @@
                             <a class="edit_action">
                                 <iconify-icon icon="mi:edit"></iconify-icon>
                             </a>
-                            <a class="delete_action">
+                            <a class="delete_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="VerificarDeletar">
                                 <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
                             </a>
                         </td>
