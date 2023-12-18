@@ -19,7 +19,7 @@
                     <p>Admin</p>
                     <p class="email_user">@User.Identity?.Name</p>
                 </div>
-                <a class="link_logout" asp-area="Identity" asp-page"/Account/Logout">
+                <a class="link_logout" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="http://localhost:5234/">
                     <iconify-icon icon="ph:sign-out-bold" class="icon_sign_out"></iconify-icon>
                 </a>
     </div>

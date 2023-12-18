@@ -164,6 +164,24 @@ END $$
 DELIMITER ;
 
 
+-- trigger att filme quando atualizar para locando
+DELIMITER $$
+CREATE TRIGGER AttEstoqueLocacao
+AFTER INSERT ON tbitenslocacao
+FOR EACH ROW
+BEGIN
+
+-- QUANTIDADE FILMES -
+UPDATE tbfilme
+SET quantidade = quantidade - NEW.quantidade_filme
+WHERE id_filme = NEW.fk_id_filme;
+
+END$$
+
+DELIMITER ;
+-- trigger att filme quando atualizar para devolvido
+
+
 
 drop trigger preencheValorFilme;
 DROP TRIGGER AttDataAtualizacao;
