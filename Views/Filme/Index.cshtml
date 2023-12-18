@@ -1,3 +1,5 @@
+@model List<FilmeModel>
+
 @{
     ViewData["Title"] = "Locacoes";
     Layout = "_LayoutAdmin";
@@ -46,43 +48,46 @@
                 </th>
             </thead>
             <tbody class="body_table">
-                <tr class="row_table">
-                    <td class="cell_table">
-                        1
-                    </td>
-                    <td class="cell_table">
-                        2
-                    </td>
-                    <td class="cell_table">
-                        3
-                    </td>
-                    <td class="cell_table">
-                        4
-                    </td>
-                    <td class="cell_table">
-                        5
-                    </td>
-                    <td class="cell_table">
-                        6
-                    </td>
-                    <td class="cell_table">
-                        7
-                    </td>
-                    <td class="cell_table">
-                        7
-                    </td>
-                    <td class="cell_table actions_cell">
-                        <a class="view_action">
-                            <iconify-icon icon="mdi:eye-outline"></iconify-icon>
-                        </a>
-                        <a class="edit_action">
-                            <iconify-icon icon="mi:edit"></iconify-icon>
-                        </a>
-                        <a class="delete_action">
-                            <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
-                        </a>
-                    </td>
-                </tr>
+                @foreach (var filme in Model)
+                {
+                    <tr class="row_table">
+                        <td class="cell_table">
+                            @filme.Id
+                        </td>
+                        <td class="cell_table">
+                            @filme.titulo
+                        </td>
+                        <td class="cell_table">
+                            @filme.sinopse
+                        </td>
+                        <td class="cell_table">
+                            @filme.quantidade
+                        </td>
+                        <td class="cell_table">
+                            @filme.valor_filme
+                        </td>
+                        <td class="cell_table">
+                            @filme.taxa_dia
+                        </td>
+                        <td class="cell_table">
+                            @filme.classificacao
+                        </td>
+                        <td class="cell_table">
+                            @filme.genero
+                        </td>
+                        <td class="cell_table actions_cell">
+                            <a class="view_action">
+                                <iconify-icon icon="mdi:eye-outline"></iconify-icon>
+                            </a>
+                            <a class="edit_action">
+                                <iconify-icon icon="mi:edit"></iconify-icon>
+                            </a>
+                            <a class="delete_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="VerificarDeletar">
+                                <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
+                            </a>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
