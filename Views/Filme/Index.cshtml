@@ -46,6 +46,7 @@
                 </th>
             </thead>
             <tbody class="body_table">
+<<<<<<< HEAD
                 <tr class="row_table">
                     <td class="cell_table">
                         1
@@ -83,6 +84,47 @@
                         </a>
                     </td>
                 </tr>
+=======
+                @foreach (var filme in Model)
+                {
+                        <tr class="row_table">
+                            <td class="cell_table">
+                            @filme.Id
+                            </td>
+                            <td class="cell_table">
+                            @filme.titulo
+                            </td>
+                            <td class="cell_table">
+                            @filme.sinopse
+                            </td>
+                            <td class="cell_table">
+                            @filme.quantidade
+                            </td>
+                            <td class="cell_table">
+                            @filme.valor_filme
+                            </td>
+                            <td class="cell_table">
+                            @filme.taxa_dia
+                            </td>
+                            <td class="cell_table">
+                            @filme.classificacao
+                            </td>
+                            <td class="cell_table">
+                            @filme.genero
+                            </td>
+                            <td class="cell_table">
+                                <div class="actions_cell">
+                                <a class="edit_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="Editar">
+                                    <iconify-icon icon="mi:edit"></iconify-icon>
+                                </a>
+                                <a class="delete_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="VerificarDeletar">
+                                    <iconify-icon icon="ant-design:delete-outlined"></iconify-icon>
+                                </a>
+                                </div>
+                            </td>
+                        </tr>
+                }
+>>>>>>> 76ed63685c8f9ee6910ef48f3fa7e28575ed963e
             </tbody>
         </table>
     </div>
