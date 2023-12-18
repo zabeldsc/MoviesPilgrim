@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
         items[0].classList.add("select-item");
         items[1].classList.remove("select-item");
         items[2].classList.remove("select-item");
-    } else if (window.location.href.includes("Filme/Index")) {
+    } else if (window.location.href.includes("/Dashboard")) {
+        items[0].classList.add("select-item");
+        items[1].classList.remove("select-item");
+        items[2].classList.remove("select-item");
+    }
+    else if (window.location.href.includes("Filme/Index")) {
         items[1].classList.add("select-item");
         items[0].classList.remove("select-item");
         items[2].classList.remove("select-item");
