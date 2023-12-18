@@ -4,6 +4,56 @@
     ViewData["Title"] = "Locked out";
 }
 
+<style>
+    :root {
+        --primary_color: #2F80ED;
+        --background: #131720;
+        --text-color: white;
+        --link-hover-color: #2569C7;
+    }
+
+    body {
+        background: var(--background);
+        color: var(--text-color);
+        height: 100vh; /* Define a altura do corpo como 100% da altura da viewport */
+        display: flex; /* Usa flexbox para centralizar verticalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    .form-control {
+        color: var(--text-color);
+        background-color: transparent;
+        border: 1px solid var(--primary_color);
+    }
+
+    .form-control:focus {
+        color: var(--text-color);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: var(--primary_color);
+    }
+
+    .btn-primary {
+        background-color: var(--primary_color);
+        border-color: var(--primary_color);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--link-hover-color);
+        border-color: var(--link-hover-color);
+    }
+
+    a {
+        color: var(--primary_color);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: var(--link-hover-color);
+    }
+</style>
+
+
 <header>
     <h1 class="text-danger">@ViewData["Title"]</h1>
     <p class="text-danger">This account has been locked out, please try again later.</p>
