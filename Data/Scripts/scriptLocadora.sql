@@ -1,4 +1,4 @@
--- Active: 1697565397734@@127.0.0.1@3306@locadora
+-- Active: 1698103399880@@127.0.0.1@3306@locadora
 
 CREATE DATABASE locadora;
 USE locadora;

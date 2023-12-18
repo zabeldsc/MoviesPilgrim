@@ -1,4 +1,4 @@
-@model FilmeModel
+@model LocacaoModel
 @{
     ViewData["Title"] = "Locações";
     Layout = "_LayoutAdmin";
@@ -6,67 +6,64 @@
 
 <link rel="stylesheet" href="../../css/Criar.css">
 
-<html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Locação</title>
+</head>
+<body>
+
 <div class="container-fluid">
     <div class="row">
-        <!-- main title -->
+        <!-- Main title -->
         <div class="col-12">
             <div class="main__title">
                 <h2>Cadastrar Locação</h2>
             </div>
         </div>
-        <!-- end main title -->
+        <!-- End main title -->
 
-        <!-- form -->
+        <!-- Form -->
         <div class="col-12">
-            <form asp-controller="Filme" asp-action="CriarFilme" method="Post">
+            <form asp-controller="Locacoes" asp-action="CriarLocacao" method="post">
                 <div class="row">
-
                     <div class="col-12 col-md-7 form__content">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form__group">
-                                    <input type="text" asp-for="titulo" class="form__input" placeholder="Nome do Cliente">
+                                    <label for="FkIdCliente">ID do Cliente</label>
+                                    <input type="text" asp-for="FkIdCliente" class="form__input" placeholder="ID do Cliente">
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="form__group">
-                                    <textarea id="sinopse" asp-for="sinopse" name="sinopse" class="form__textarea"
-                                        placeholder="Nome do Filme"></textarea>
+                                    <label for="FkIdFilme">ID do Filme</label>
+                                    <input type="text" asp-for="FkIdFilme" class="form__input" placeholder="ID do Filme">
                                 </div>
                             </div>
-
-
                             <div class="col-12">
                                 <div class="form__group">
-                                    <input type="text" asp-for="quantidade" class="form__input"
-                                        placeholder="Data da Locação">
+                                    <label for="DataLocacao">Data da Locação</label>
+                                    <input type="text" asp-for="DataLocacao" class="form__input" placeholder="Data da Locação">
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="form__group">
-                                    <input type="text" class="form__input" asp-for="valor_filme" placeholder="Data Limite">
+                                    <label for="DataLimite">Data Limite</label>
+                                    <input type="text" asp-for="DataLimite" class="form__input" placeholder="Data Limite">
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="form__group">
-                                    <input type="text" asp-for="taxa_dia" class="form__input" placeholder="Status">
+                                    <label for="StatusLocacao">Status da Locação</label>
+                                    <input type="text" asp-for="StatusLocacao" class="form__input" placeholder="Status da Locação">
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="form__group">
-                                    <input type="text" asp-for="classificacao" class="form__input"
-                                        placeholder="Total (R$)">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form__group">
-                                    <input type="text" asp-for="genero" class="form__input" placeholder="Ações">
+                                    <label for="TotalLocacao">Total (R$)</label>
+                                    <input type="text" asp-for="TotalLocacao" class="form__input" placeholder="Total (R$)">
                                 </div>
                             </div>
                         </div>
@@ -75,17 +72,17 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12" id="botoes">
-                                <button role="submit" class="form__bt" asp-controller="Locacoes"
-                                    asp-action="Index">voltar</button>
-                                <button type="submit" class="form__btn">cadastrar</button>
+                                <button type="submit" class="form__btn">Cadastrar</button>
+                                <button type="button" class="form__bt" onclick="window.location.href='@Url.Action("Index", "Locacoes")'">Voltar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <!-- end form -->
+        <!-- End form -->
     </div>
 </div>
 
+</body>
 </html>

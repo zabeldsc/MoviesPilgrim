@@ -1,4 +1,4 @@
--- Active: 1700955922591@@127.0.0.1@3306@locadora
+-- Active: 1698103399880@@127.0.0.1@3306@locadora
 USE LOCADORA;
 /* CREATE TABLES */
 CREATE TABLE tbendereco(

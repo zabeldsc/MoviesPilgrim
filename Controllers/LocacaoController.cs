@@ -12,10 +12,10 @@ using Microsoft.AspNetCore.Authorization;
 namespace MoviesPilgrim.Controllers
 {
     [Authorize]
-    public class LocacoesController : Controller
+    public class LocacaoController : Controller
     {
         private readonly ILocadoraRepository _locadoraRepository;
-        public LocacoesController(ILocadoraRepository locadoraRepository)
+        public LocacaoController(ILocadoraRepository locadoraRepository)
         {
             _locadoraRepository = locadoraRepository;
         }
