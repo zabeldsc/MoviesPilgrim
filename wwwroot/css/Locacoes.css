@@ -11,6 +11,10 @@ section{
     overflow-x: hidden;
 }
 
+h2 {
+    color: white;
+}
+
 .head_section{
     display: flex;
     align-items: center;
