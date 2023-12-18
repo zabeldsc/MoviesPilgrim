@@ -24,6 +24,18 @@ namespace MoviesPilgrim.Controllers
             return View(Locacoes);
         }
 
+        public IActionResult Criar(){
+            return View();
+        }
+
+        public IActionResult Editar(){
+            return View();
+        }
+
+        public IActionResult VerificarDeletar(){
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

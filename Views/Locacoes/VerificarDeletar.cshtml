@@ -1,0 +1,24 @@
+@model FilmeModel
+@{
+    ViewData["Title"] = "Excluir Locação";
+    Layout = "_LayoutAdmin";
+}
+
+<link rel="stylesheet" href="../../css/VerificarDeletar.css">
+
+<div class="text-center">
+
+    <form asp-action="Deletar">
+        <div id="delete" class="zoom-anim-dialog delete">
+            <h6 class="delete__title">Realmente deseja apagar a locação ""?</h6>
+
+            <div class="delete__btns">
+                <button class="delete__btn delete__btn--apply" type="submit" asp-route-id=""
+                    asp-controller="Filme" asp-action="Deletar">Deletar</button>
+                <a role="submit" class="delete__btn delete__btn--dismiss" role="submit" class="btn btn-secondary"
+                    asp-controller="Locacoes" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </form>
+
+</div>
