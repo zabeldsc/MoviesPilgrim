@@ -7,7 +7,7 @@ using MoviesPilgrim.Repository;
 var builder = WebApplication.CreateBuilder(args);
 
 
-string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+string mySqlConnection = builder.Configuration.GetConnectionString("DefaultDatabase");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
