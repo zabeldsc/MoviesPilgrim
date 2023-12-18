@@ -15,17 +15,17 @@ CREATE TABLE tbendereco(
     pais varchar(20) default 'Brasil'
 );
 
-CREATE TABLE
-    tbfuncionarios (
-        mat_func INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR (50),
-        CPF VARCHAR(14),
-        email VARCHAR(60),
-        telefone VARCHAR(20),
-        data_matricula DATE,
-        fk_id_endereco INT,
-        FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
-    );
+-- CREATE TABLE
+--     tbfuncionarios (
+--         mat_func INT AUTO_INCREMENT PRIMARY KEY,
+--         nome VARCHAR (50),
+--         CPF VARCHAR(14),
+--         email VARCHAR(60),
+--         telefone VARCHAR(20),
+--         data_matricula DATE,
+--         fk_id_endereco INT,
+--         FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
+--     );
 
 -- CREATE TABLE
 --     tbfornecedor (
