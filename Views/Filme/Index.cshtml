@@ -76,10 +76,7 @@
                             @filme.genero
                         </td>
                         <td class="cell_table actions_cell">
-                            <a class="view_action">
-                                <iconify-icon icon="mdi:eye-outline"></iconify-icon>
-                            </a>
-                            <a class="edit_action">
+                            <a class="edit_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="Editar">
                                 <iconify-icon icon="mi:edit"></iconify-icon>
                             </a>
                             <a class="delete_action" asp-route-id="@filme.Id" asp-controller="Filme" asp-action="VerificarDeletar">
