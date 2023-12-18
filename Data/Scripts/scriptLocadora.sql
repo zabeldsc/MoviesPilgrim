@@ -87,50 +87,6 @@ JOIN tbendereco e ON c.fk_id_endereco = e.id_endereco;
 
 SELECT * FROM ViewEnderecosClientes;
 
-/*ENDEREÇO DOS FUNCIONÁRIOS */
-CREATE VIEW ViewEnderecosFuncionarios AS
-SELECT
-    f.mat_func,
-    f.nome AS nome_funcionario,
-    f.CPF,
-    f.email,
-    f.telefone,
-    e.CEP,
-    e.endereco,
-    e.numero,
-    e.bairro,
-    e.cidade,
-    e.estado,
-    e.pais
-FROM tbfuncionarios f
-JOIN tbendereco e ON f.fk_id_endereco = e.id_endereco;
-
-SELECT * FROM ViewEnderecosFuncionarios;
-
-/* ENDEREÇO DOS FORNECEDORES */
-CREATE VIEW ViewEnderecosFornecedores AS
-SELECT
-    fr.id_fornecedor,
-    fr.razao_social AS nome_fornecedor,
-    fr.CNPJ,
-    fr.nome_fantasia,
-    fr.telefone,
-    fr.whatsapp,
-    fr.email,
-    fr.ramal,
-    fr.site,
-    e.CEP,
-    e.endereco,
-    e.numero,
-    e.bairro,
-    e.cidade,
-    e.estado,
-    e.pais
-FROM tbfornecedor fr
-JOIN tbendereco e ON fr.fk_id_endereco = e.id_endereco;
-
-SELECT * FROM ViewEnderecosFornecedores;
-
 -- EXECUÇÃO PROCEDURES
 
 CALL VerificarMulta(5, @nome_cliente, @id_cliente, @total_multa);

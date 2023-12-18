@@ -59,13 +59,3 @@ CREATE TABLE
         FOREIGN KEY (fk_id_locacao) REFERENCES tblocacoes(id_locacao),
         FOREIGN KEY (fk_id_filme) REFERENCES tbfilme(id_filme)
     );
-    
-
-CREATE TABLE tbmulta (
-	fk_id_locacao INT,
-    fk_id_cliente INT,
-    dias_atrasados INT,
-    valor_multa DECIMAL(10,2),
-    FOREIGN KEY (fk_id_locacao) references tblocacoes(id_locacao),
-	FOREIGN KEY (fk_id_cliente) references tbclientes(id_cliente)
-);
