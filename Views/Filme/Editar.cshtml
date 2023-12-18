@@ -1,4 +1,4 @@
-@model FilmeModel
+@model Filme
 @{
     ViewData["Title"] = "Filmes";
     Layout = "_LayoutAdmin";
@@ -87,7 +87,8 @@
         </div>
         <!-- end form -->
     </div>
-</div>
-
-</html>
+    <button type="submit" class="btn btn-primary">Alterar</button>
+    <a role="submit" class="btn btn-secondary" asp-controller="Filme" asp-action="Index">Voltar</a>
+    <input type="hidden" asp-for="Id">
+</form>
 
