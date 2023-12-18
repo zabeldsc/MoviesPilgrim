@@ -87,6 +87,8 @@ END $$
 
 DELIMITER ;
 
+drop TRIGGER AttTotalLocacao;
+
 DELIMITER $$
 
 CREATE TRIGGER AttTotalLocacao
@@ -94,7 +96,7 @@ AFTER INSERT ON tbitenslocacao
 FOR EACH ROW
 BEGIN
     DECLARE total DECIMAL(10,2);
-
+	
     SELECT SUM(subtotal) INTO total
     FROM tbitenslocacao
     WHERE fk_id_locacao = NEW.fk_id_locacao;
@@ -105,6 +107,8 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+drop TRIGGER CalcSubtotal;
 
 DELIMITER $$
 

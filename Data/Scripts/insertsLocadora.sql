@@ -14,108 +14,106 @@ VALUES ('45632-650', 'Rua dos Jardineiros', '22', 'Hiberin', 'Guandi', 'RE', 'An
 ('98765-432', 'Avenida dos Pássaros', '456', 'Copacabana', 'Rio de Janeiro', 'RJ', 'Brasil'),
 ('54321-876', 'Alameda das Árvores', '789', 'Copacabana', 'Rio de Janeiro', 'RJ', 'Brasil');
 
-INSERT INTO
-    tbfuncionarios(
-        nome,
-        cpf,
-        email,
-        telefone,
-        data_matricula,
-        fk_id_endereco
-    )
-VALUES
-(
-        'Edson',
-        '06586788404',
-        'edcosta607@gmail.com',
-        '71997130234',
-        '2018-03-21',
-        1
-    ), (
-        'Alexandre',
-        '47896798416',
-        'buxexafrancis@gmail.com',
-        '71997831397',
-        '2022-10-08',
-        2
-    ), (
-        'João',
-        '97745789418',
-        'tijolo007@gmail.com',
-        '71887900235',
-        '2020-12-11',
-        3
-    ), (
-        'Isabel',
-        '22779988407',
-        'isagod004@gmail.com',
-        '71987167236',
-        '2019-03-15',
-        4
-    ), (
-        'José',
-        '12586788435',
-        'zeludaoslk@gmail.com',
-        '71998140738',
-        '2023-11-08',
-        5
-    ),
-    ('Mariana Senna',
-        '45632145699',
-        'marinasenna22@gmail.com',
-        '71985652311',
-        '2018-05-06',
-        6
-	),
-    ('Murilo Goes', '78965412333', 'murilogoes87@gmail.com', '71985621247', '2018-02-02', '6'),
-	('Melanie Silva', '71456789955', 'melaniesilva14@gmail.com', '71987452136', '2018-09-01', '7');
-
-    
-    
-INSERT INTO
-    tbfornecedor(
-        CNPJ,
-        razao_social,
-        nome_fantasia,
-        telefone,
-        whatsapp,
-        email,
-        ramal,
-        site,
-        fk_id_endereco
-    )
-VALUES
-(
-        '27.654.722/0001-16',
-        'PARAMOUNT PICTURES BRASIL DISTRIBUIDORA DE FILMES LTDA.',
-        'Paramount',
-        '36067897',
-        '071988459887',
-        'paramountbr@gmail.com',
-        45,
-        'www.paramount.com.br',
-        7
-    ), (
-        '73.042.962/0001-87',
-        'THE WALT DISNEY COMPANY (BRASIL) LTDA',
-        ' Walt Disney',
-        '44445555',
-        '0719974596867',
-        'disneyBr@gmail.com',
-        21,
-        'www.waltdisney.com.br',
-        8
-    ), (
-        '06.152.891/0001-88',
-        'WARNER BROS. ENTRETENIMENTO BRASIL LTDA.',
-        ' Warner Bros',
-        '78789696',
-        '0759977594423',
-        '@warnerBrosBR@gmail.com',
-        80,
-        'www.warnerbros.com.br',
-        9
-    );
+-- INSERT INTO
+--     tbfuncionarios(
+--         nome,
+--         cpf,
+--         email,
+--         telefone,
+--         data_matricula,
+--         fk_id_endereco
+--     )
+-- VALUES
+-- (
+--         'Edson',
+--         '06586788404',
+--         'edcosta607@gmail.com',
+--         '71997130234',
+--         '2018-03-21',
+--         1
+--     ), (
+--         'Alexandre',
+--         '47896798416',
+--         'buxexafrancis@gmail.com',
+--         '71997831397',
+--         '2022-10-08',
+--         2
+--     ), (
+--         'João',
+--         '97745789418',
+--         'tijolo007@gmail.com',
+--         '71887900235',
+--         '2020-12-11',
+--         3
+--     ), (
+--         'Isabel',
+--         '22779988407',
+--         'isagod004@gmail.com',
+--         '71987167236',
+--         '2019-03-15',
+--         4
+--     ), (
+--         'José',
+--         '12586788435',
+--         'zeludaoslk@gmail.com',
+--         '71998140738',
+--         '2023-11-08',
+--         5
+--     ),
+--     ('Mariana Senna',
+--         '45632145699',
+--         'marinasenna22@gmail.com',
+--         '71985652311',
+--         '2018-05-06',
+--         6
+-- 	),
+--     ('Murilo Goes', '78965412333', 'murilogoes87@gmail.com', '71985621247', '2018-02-02', '6'),
+-- 	('Melanie Silva', '71456789955', 'melaniesilva14@gmail.com', '71987452136', '2018-09-01', '7');
+ 
+-- INSERT INTO
+--     tbfornecedor(
+--         CNPJ,
+--         razao_social,
+--         nome_fantasia,
+--         telefone,
+--         whatsapp,
+--         email,
+--         ramal,
+--         site,
+--         fk_id_endereco
+--     )
+-- VALUES
+-- (
+--         '27.654.722/0001-16',
+--         'PARAMOUNT PICTURES BRASIL DISTRIBUIDORA DE FILMES LTDA.',
+--         'Paramount',
+--         '36067897',
+--         '071988459887',
+--         'paramountbr@gmail.com',
+--         45,
+--         'www.paramount.com.br',
+--         7
+--     ), (
+--         '73.042.962/0001-87',
+--         'THE WALT DISNEY COMPANY (BRASIL) LTDA',
+--         ' Walt Disney',
+--         '44445555',
+--         '0719974596867',
+--         'disneyBr@gmail.com',
+--         21,
+--         'www.waltdisney.com.br',
+--         8
+--     ), (
+--         '06.152.891/0001-88',
+--         'WARNER BROS. ENTRETENIMENTO BRASIL LTDA.',
+--         ' Warner Bros',
+--         '78789696',
+--         '0759977594423',
+--         '@warnerBrosBR@gmail.com',
+--         80,
+--         'www.warnerbros.com.br',
+--         9
+--     );
 
 INSERT INTO
     tbclientes(
@@ -226,9 +224,9 @@ VALUES
 INSERT INTO
 	tbitenslocacao(fk_id_locacao,quantidade_filme)
     VALUES
-    (37,1),
-    (38,2),
-    (39,2),
-    (39,1),
-    (40,2),
-    (40,1);
+    (1,2),
+    (2,4),
+    (2,8),
+    (2,6),
+    (3,5),
+    (4,4);
