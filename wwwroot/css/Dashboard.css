@@ -665,6 +665,10 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
     border-radius: 16px;
     overflow: hidden;
+    height: 489px;
+    max-height: 489px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .dashbox__title {
@@ -2309,7 +2313,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #laembaixo {
-    height: 447px;
+    height: 1000px !important;
+    max-height: 1000px !important;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
