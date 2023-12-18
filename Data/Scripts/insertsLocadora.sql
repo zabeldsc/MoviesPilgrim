@@ -130,3 +130,20 @@ INSERT INTO
     (2,6),
     (3,5),
     (4,4);
+
+
+-- ATRASADOS
+
+INSERT INTO `locadora`.`tblocacoes` (`fk_id_cliente`, `fk_id_filme`, `data_locacao`, `data_limite`, `status_locacao`) 
+VALUES 
+('2', '4', '2023-12-18 13:34:07', '2023-12-28 13:34:07', 'Atrasado'),
+('1', '5', '2023-12-18 13:34:07', '2023-12-28 13:34:07', 'Atrasado'),
+('3', '2', '2023-12-18 13:34:07', '2023-12-28 13:34:07', 'Atrasado'),
+('1', '5', '2023-12-18 13:34:07', '2023-12-28 13:34:07', 'Atrasado'),
+('2', '3', '2023-12-18 13:34:07', '2023-12-28 13:34:07', 'Atrasado');
+
+-- DEVOLVIDOS
+
+
+
+
