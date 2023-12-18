@@ -1,7 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultDatabase": "Server=localhost;Database=locadora;User=root;Password=Bel250205!;"
-
+    "DefaultConnection": "server=localhost;user=root;password=7/8*9-a1s2d3;database=locadora;"
   },
   "Logging": {
     "LogLevel": {

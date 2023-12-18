@@ -1,3 +1,4 @@
+-- Active: 1700955922591@@127.0.0.1@3306@locadora
 USE LOCADORA;
 
 
@@ -14,32 +15,32 @@ CREATE TABLE tbendereco(
     pais varchar(20) default 'Brasil'
 );
 
-CREATE TABLE
-    tbfuncionarios (
-        mat_func INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR (50),
-        CPF VARCHAR(14),
-        email VARCHAR(60),
-        telefone VARCHAR(20),
-        data_matricula DATE,
-        fk_id_endereco INT,
-        FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
-    );
+-- CREATE TABLE
+--     tbfuncionarios (
+--         mat_func INT AUTO_INCREMENT PRIMARY KEY,
+--         nome VARCHAR (50),
+--         CPF VARCHAR(14),
+--         email VARCHAR(60),
+--         telefone VARCHAR(20),
+--         data_matricula DATE,
+--         fk_id_endereco INT,
+--         FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
+--     );
 
-CREATE TABLE
-    tbfornecedor (
-		id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
-        CNPJ VARCHAR(25) UNIQUE,
-        razao_social VARCHAR(100) NOT NULL,
-        nome_fantasia VARCHAR(60),
-        telefone VARCHAR(14),
-        whatsapp VARCHAR(14),
-        email VARCHAR(60),
-        ramal INT,
-        site VARCHAR(140),
-		fk_id_endereco INT,
-        FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
-    );
+-- CREATE TABLE
+--     tbfornecedor (
+-- 		id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
+--         CNPJ VARCHAR(25) UNIQUE,
+--         razao_social VARCHAR(100) NOT NULL,
+--         nome_fantasia VARCHAR(60),
+--         telefone VARCHAR(14),
+--         whatsapp VARCHAR(14),
+--         email VARCHAR(60),
+--         ramal INT,
+--         site VARCHAR(140),
+-- 		fk_id_endereco INT,
+--         FOREIGN KEY (fk_id_endereco) references tbendereco(id_endereco)
+--     );
 
 CREATE TABLE
     tbclientes (
@@ -55,7 +56,6 @@ CREATE TABLE
 CREATE TABLE
     tbfilme (
         id_filme INT AUTO_INCREMENT PRIMARY KEY,
-        fk_id_fornecedor INT,
         titulo VARCHAR(100),
         sinopse VARCHAR(280),
         quantidade INT,
@@ -63,7 +63,6 @@ CREATE TABLE
         taxa_dia DECIMAL(10, 2),
         classificacao varchar(10),
         genero VARCHAR(50),
-        FOREIGN KEY (fk_id_fornecedor) REFERENCES tbfornecedor (id_fornecedor)
 );
 
 CREATE TABLE

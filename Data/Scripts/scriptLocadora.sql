@@ -180,5 +180,5 @@ SELECT @data_locacao, @data_limite, @status_locacao, @id_cliente, @id_filme, @to
 -- DELETE FROM tbclientes;
 -- DELETE FROM tbfilme;
 -- DELETE FROM tblocacoes;
--- DELETE FROM tbfornecedor;
 -- DELETE FROM tbitenslocacao;
+

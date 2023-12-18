@@ -16,7 +16,7 @@ public class FilmeController : Controller
 
 
     public IActionResult Index(){
-        List<Filme> filme = _locadoraRepository.listarFilmes();
+        List<FilmeModel> filme = _locadoraRepository.listarFilmes();
         return View(filme);
     }
     public IActionResult Criar(){
@@ -24,7 +24,7 @@ public class FilmeController : Controller
     }
 
     [HttpPost]
-    public IActionResult CriarFilme(Filme filme){
+    public IActionResult CriarFilme(FilmeModel filme){
         _locadoraRepository.adicionar(filme);
         return RedirectToAction("Index");
     }
@@ -35,7 +35,7 @@ public class FilmeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Atualizar(Filme filme){
+    public IActionResult Atualizar(FilmeModel filme){
         _locadoraRepository.atualizar(filme);
         return RedirectToAction("Index");
     }

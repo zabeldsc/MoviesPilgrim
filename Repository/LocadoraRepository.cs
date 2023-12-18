@@ -13,21 +13,21 @@ namespace MoviesPilgrim.Repository
         public LocadoraRepository(ApplicationDbContext applicationDbContext){
             application_DbContext = applicationDbContext;
         }
-        public Filme adicionar(Filme filme)
+        public FilmeModel adicionar(FilmeModel filme)
         {
             application_DbContext.Filmes.Add(filme);
             application_DbContext.SaveChanges();
             return filme;
         }
 
-        public List<Filme> listarFilmes(){
+        public List<FilmeModel> listarFilmes(){
             return application_DbContext.Filmes.ToList();
         }
-        public Filme buscarId(int id){
+        public FilmeModel buscarId(int id){
             return application_DbContext.Filmes.FirstOrDefault(x => x.Id == id);
         }
-        public Filme atualizar(Filme filme){
-            Filme filmeDB = buscarId(filme.Id);
+        public FilmeModel atualizar(FilmeModel filme){
+            FilmeModel filmeDB = buscarId(filme.Id);
 
             if(filmeDB == null) throw new Exception("Filme não foi encontrado");
 
@@ -45,7 +45,7 @@ namespace MoviesPilgrim.Repository
         }
 
         public bool deletar(int id){
-            Filme filmeDB = buscarId(id);
+            FilmeModel filmeDB = buscarId(id);
 
             if(filmeDB == null) throw new Exception("Filme não foi encontrado");
 
