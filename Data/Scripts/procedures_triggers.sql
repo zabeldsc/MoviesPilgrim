@@ -171,6 +171,27 @@ AFTER INSERT ON tbitenslocacao
 FOR EACH ROW
 BEGIN
 
+-- trigger subtrair filme quando adicionar em locando
+DELIMITER $$
+CREATE TRIGGER SubtrairQuantidadeFilme
+AFTER INSERT ON tblocacoes
+FOR EACH ROW
+BEGIN
+    DECLARE quantidade_alugada INT;
+    
+    -- Encontrar a quantidade alugada do filme inserido
+    SELECT COUNT(*) INTO quantidade_alugada
+    FROM tblocacoes l
+    INNER JOIN tbfilme f ON l.fk_id_filme = f.id_filme
+    WHERE l.fk_id_filme = NEW.fk_id_filme;
+
+    -- Subtrair a quantidade alugada da quantidade total do filme
+    UPDATE tbfilme
+    SET quantidade = quantidade - quantidade_alugada
+    WHERE id_filme = NEW.fk_id_filme;
+END$$
+DELIMITER;
+
 -- QUANTIDADE FILMES -
 UPDATE tbfilme
 SET quantidade = quantidade - NEW.quantidade_filme
